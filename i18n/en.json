@@ -1,4 +1,6 @@
 {
+  "menu.home":"Home",
+  "menu.directory":"Directory",
   "banner.title.start": "Website",
   "banner.title.end": "generated with Ekit",
   "banner.subtitle": "This page is an example of an SSR website built with the Ekit template engine, using layouts, partials, and structured data.",
