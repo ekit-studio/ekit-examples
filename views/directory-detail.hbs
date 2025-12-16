@@ -1,0 +1,129 @@
+---
+layout: default
+datasources:
+  directory_detail:
+    from: directory
+    uid: '{{query.uid}}'
+---
+
+{{#single ekdata.directory_detail}}
+  <section class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-500">
+        <a href="{{_base}}" class="hover:text-gray-900">
+          {{ektrans "detail.home"}}
+        </a>
+        <span class="mx-2">/</span>
+        <a href="{{_base}}directory" class="hover:text-gray-900">
+          {{ektrans "detail.directory"}}
+        </a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700">
+          {{ektrans "detail.file"}}
+        </span>
+      </nav>
+      <!-- Header -->
+      <div class="mt-6 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="min-w-0">
+          <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+            {{this.name}}
+          </h1>
+
+          {{#if this.role}}
+            <p class="mt-2 text-lg text-gray-600">{{this.role}}</p>
+          {{/if}}
+
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-wrap gap-3">
+
+          {{#if this.email}}
+            <a href="mailto:{{this.email}}" class="inline-flex items-center justify-center px-4 py-2 rounded-xl border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-100">
+              {{ektrans "directory.contact"}}
+            </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 lg:grid-cols-3">
+      <!-- Main -->
+      <div class="lg:col-span-2 space-y-6">
+        <article class="rounded-2xl border border-gray-200 bg-white p-6">
+          <h2 class="text-lg font-semibold text-gray-900">
+            {{ektrans "detail.present"}}
+          </h2>
+
+
+          {{#if this.overview}}
+            <p class="mt-3 text-sm leading-6 text-gray-600">
+              {{{this.overview}}}
+            </p>
+          {{else}}
+            <p class="mt-3 text-sm leading-6 text-gray-500">
+              {{ektrans "detail.nodesc"}}
+            </p>
+          {{/if}}
+        </article>
+
+        
+        {{#if item.gallery}}
+          <section class="rounded-2xl border border-gray-200 bg-white p-6">
+            <h2 class="text-lg font-semibold text-gray-900">
+              {{#if (eq params.lang "fr")}}Galerie{{else}}Gallery{{/if}}
+            </h2>
+
+            <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
+              {{#each item.gallery}}
+                <a href="{{this}}" class="block overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+                  <img src="{{this}}" alt="" class="h-32 w-full object-cover">
+                </a>
+              {{/each}}
+            </div>
+
+            <p class="mt-3 text-xs text-gray-500">
+              {{#if (eq params.lang "fr")}}
+                Images d’exemple — remplace-les par tes URLs.
+              {{else}}
+                Demo images — replace with your own URLs.
+              {{/if}}
+            </p>
+          </section>
+        {{/if}}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <h2 class="text-lg font-semibold text-gray-900">
+            {{ektrans "detail.infos"}}
+          </h2>
+
+          <dl class="mt-4 space-y-3 text-sm">
+            {{#if this.email}}
+              <div class="flex items-center justify-between gap-4">
+                <dt class="text-gray-500">Email</dt>
+                <dd class="text-gray-900 font-medium text-right">{{this.email}}</dd>
+              </div>
+            {{/if}}
+          </dl>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <h2 class="text-lg font-semibold text-gray-900">
+            {{ektrans "detail.navigation"}}
+          </h2>
+          <div class="mt-4 flex flex-col gap-2">
+            <a href="{{lang}}/directory" class="inline-flex items-center justify-center px-4 py-2 rounded-xl border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-100">
+              ← {{ektrans "detail.backdir"}}
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+{{/single}}

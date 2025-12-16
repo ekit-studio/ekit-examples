@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{params.lang}}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <base href="{{_base}}">
+
+  <title>{{_site}}</title>
+
+  <link rel="stylesheet" href="{{ekasset "css/tailwind.css"}}">
+  <link rel="stylesheet" href="{{ekasset "css/custom.css"}}">
+
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+  {{> header}}
+
+  <main class="min-h-screen">
+    {{{body}}}
+  </main>
+
+  {{> footer}}
+</body>
+</html>

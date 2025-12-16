@@ -1,0 +1,72 @@
+<header class="bg-white/80 backdrop-blur border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="h-16 flex items-center justify-between gap-4">
+
+      <!-- Brand -->
+      <a href="{{_base}}" class="flex items-center gap-2 font-semibold text-gray-900">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900 text-white text-sm">Ek</span>
+        <span class="tracking-tight">{{_site}}</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="{{lang}}/" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Accueil</a>
+        <a href="{{lang}}/directory" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Directory</a>
+      </nav>
+      <!-- Desktop actions -->
+      <div class="hidden md:flex items-center gap-1 text-sm">
+        <a
+          href="en/{{view}}{{queryString}}"
+          class="px-3 py-2 rounded-lg {{#if (eq params.lang "en")}}bg-gray-900 text-white{{else}}text-gray-600 hover:bg-gray-100{{/if}}">
+          EN
+        </a>
+        <a
+          href="fr/{{view}}{{queryString}}"
+          class="px-3 py-2 rounded-lg {{#if (eq params.lang "fr")}}bg-gray-900 text-white{{else}}text-gray-600 hover:bg-gray-100{{/if}}">
+          FR
+        </a>
+      </div>
+
+      <!-- Mobile menu (no JS) -->
+      <details class="md:hidden relative">
+        <summary
+          class="list-none inline-flex items-center justify-center h-10 w-10 rounded-lg hover:bg-gray-100 cursor-pointer"
+          aria-label="Ouvrir le menu"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </summary>
+
+        <!-- Panel -->
+        <div class="absolute right-0 mt-2 w-64 rounded-xl border border-gray-200 bg-white shadow-lg p-2">
+          <nav class="flex flex-col gap-1">
+            <a href="" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Accueil</a>
+            <a href="{{_base}}docs" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Docs</a>
+            <a href="/{{lang}}/directory" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Directory</a>
+            <a href="{{_base}}contact" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+
+            <div class="h-px bg-gray-200 my-2"></div>
+
+            <div class="flex items-center justify-between px-3 py-2 text-sm text-gray-600">
+              <span>Language</span>
+              <div class="flex gap-1">
+                <a
+                  href="/en/"
+                  class="px-2 py-1 rounded-md {{#if (eq params.lang "en")}}bg-gray-900 text-white{{else}}hover:bg-gray-100{{/if}}">
+                  EN
+                </a>
+                <a
+                  href="/fr/"
+                  class="px-2 py-1 rounded-md {{#if (eq params.lang "fr")}}bg-gray-900 text-white{{else}}hover:bg-gray-100{{/if}}">
+                  FR
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</header>

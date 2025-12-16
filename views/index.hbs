@@ -1,0 +1,90 @@
+---
+layout: default
+datasources:
+  home-features:
+    from: home-features
+    limit: 3
+  home-process:
+    from: home-process
+    limit: 3
+---
+
+<section class="relative overflow-hidden">
+  <!-- Hero -->
+  <div class="max-w-6xl mx-auto px-4 pt-20 pb-24 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+      {{ektrans "banner.title.start"}}
+      <span class="text-gray-700">{{t "banner.title.end"}}</span>
+    </h1>
+
+    <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+      {{ektrans "banner.subtitle"}}
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+      <a href="{{_base}}docs"
+         class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gray-900 text-white font-medium hover:bg-gray-800">
+        {{ektrans "home.button.see_site_generation"}}
+      </a>
+      <a href="{{_base}}"
+         class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-100">
+        {{ektrans "home.button.explore"}}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <div class="grid md:grid-cols-3 gap-8">
+      {{#each ekdata.home-features}}
+        <div class="p-6 rounded-2xl border border-gray-200">
+          <h3 class="font-semibold text-lg">{{this.title}}</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            {{this.description}}
+          </p>
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="bg-gray-50 border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <h2 class="text-3xl font-bold text-center">
+      {{ektrans "build.process.title"}}
+    </h2>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+      {{#each ekdata.home-process}}
+        <div>
+          <div class="mx-auto h-10 w-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-semibold">1</div>
+          <h3 class="mt-4 font-semibold">{{this.title}}</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            {{this.description}}
+          </p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h2 class="text-3xl font-bold">
+      {{ektrans "concrete.title"}}
+    </h2>
+    <p class="mt-4 text-gray-600">
+      {{ektrans "concrete.description"}}
+    </p>
+
+    <a href="{{_base}}docs"
+       class="inline-flex mt-8 px-6 py-3 rounded-xl bg-gray-900 text-white font-medium hover:bg-gray-800">
+      {{ektrans "concrete.button"}}
+    </a>
+  </div>
+</section>
