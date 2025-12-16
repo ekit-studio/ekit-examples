@@ -7,10 +7,25 @@ The i18n files (`fr`, `en`) are already included in this template.
 
 ---
 
+## Project Setup (Required)
+
+Before using this template, you must create a **new multilingual project**.
+
+1. In Ekit, create a **new project**
+2. Enable the following languages:
+   - **French (`fr`)**
+   - **English (`en`)**
+
+This template relies on a multilingual project configuration.
+
+---
+
 ## Template Installation
 
-1. Create a new template in the **Ekit Studio**
-2. Copy the files from this template example  
+1. Open your **project** in Ekit
+2. Go to **Templates**
+3. Create a **new template**
+4. Copy the files from this template example  
    **or** replace the content of the existing files with the provided ones
 
 Once the files are in place, configure the tables described below.
@@ -18,6 +33,8 @@ Once the files are in place, configure the tables described below.
 ---
 
 ## Tables to Create
+
+All tables must be created from within your **project**, in the **Tables** section.
 
 ### `home-features`
 
