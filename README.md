@@ -3,7 +3,7 @@
 This template is an example of a **Server-Side Rendered (SSR)** website built with **Ekit**.  
 It demonstrates the use of **layouts**, **partials**, **datasources**, **multilingual content**, and list/detail navigation.
 
-The i18n files are already included in this template.
+The i18n files (`fr`, `en`) are already included in this template.
 
 ---
 
@@ -86,7 +86,7 @@ This table powers the directory list and detail pages.
 
 ## Internationalization (i18n)
 
-The i18n files (`fr`, `en`) are included in the template.
+The template includes multilingual support out of the box.
 
 Translations are accessed using the helper:
 
@@ -100,10 +100,59 @@ No additional configuration is required.
 
 ## Helpers Used
 
-- `ekdata` — data access
+- `ekdata` — access structured data
 - `ektrans` — i18n translations
 - `single` — fetch a single record
 - `year` — current year
+
+---
+
+## Styling (Tailwind CSS)
+
+This template includes a **precompiled Tailwind CSS file**, located at:
+
+```
+assets/css/tailwind.css
+```
+
+The template works immediately without any build step.
+
+---
+
+### Regenerating Tailwind CSS (optional)
+
+If you modify Tailwind classes in the templates, you can regenerate the CSS.
+
+#### 1. Install dependencies
+```bash
+npm install
+```
+
+#### 2. Compile Tailwind
+```bash
+npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify
+```
+
+---
+
+### Tailwind Configuration
+
+Make sure your `tailwind.config.js` scans the Ekit template folders:
+
+```js
+module.exports = {
+  content: [
+    './views/**/*.hbs',
+    './layouts/**/*.hbs',
+    './partials/**/*.hbs',
+    './components/**/*.hbs'
+  ],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+}
+```
 
 ---
 
