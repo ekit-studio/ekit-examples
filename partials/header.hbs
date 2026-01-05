@@ -50,12 +50,12 @@
               <span>Language</span>
               <div class="flex gap-1">
                 <a
-                  href="/en/"
+                  href="/en/{{view}}{{queryString}}"
                   class="px-2 py-1 rounded-md {{#if (eq params.lang "en")}}bg-gray-900 text-white{{else}}hover:bg-gray-100{{/if}}">
                   EN
                 </a>
                 <a
-                  href="/fr/"
+                  href="/fr/{{view}}{{queryString}}"
                   class="px-2 py-1 rounded-md {{#if (eq params.lang "fr")}}bg-gray-900 text-white{{else}}hover:bg-gray-100{{/if}}">
                   FR
                 </a>

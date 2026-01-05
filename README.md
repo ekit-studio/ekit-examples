@@ -85,7 +85,7 @@ This table powers the directory list and detail pages.
 
 | Field | Type | Multilingual |
 |------|------|-------------|
-| Name | longtext | No |
+| Name | text | No |
 | Role | text | Yes |
 | Description | longtext | Yes |
 | Overview | richtext | Yes |
