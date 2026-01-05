@@ -11,11 +11,11 @@ datasources:
     <div class="max-w-6xl mx-auto px-4 py-10">
       <!-- Breadcrumb -->
       <nav class="text-sm text-gray-500">
-        <a href="{{_base}}" class="hover:text-gray-900">
+        <a href="/" class="hover:text-gray-900">
           {{ektrans "detail.home"}}
         </a>
         <span class="mx-2">/</span>
-        <a href="{{_base}}directory" class="hover:text-gray-900">
+        <a href="/{{lang}}/directory" class="hover:text-gray-900">
           {{ektrans "detail.directory"}}
         </a>
         <span class="mx-2">/</span>
@@ -118,7 +118,7 @@ datasources:
             {{ektrans "detail.navigation"}}
           </h2>
           <div class="mt-4 flex flex-col gap-2">
-            <a href="{{lang}}/directory" class="inline-flex items-center justify-center px-4 py-2 rounded-xl border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-100">
+            <a href="/{{lang}}/directory" class="inline-flex items-center justify-center px-4 py-2 rounded-xl border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-100">
               ← {{ektrans "detail.backdir"}}
             </a>
           </div>

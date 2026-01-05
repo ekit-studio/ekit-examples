@@ -47,6 +47,14 @@ This table is used to display the main features on the homepage.
 
 👉 Create **3 records** in this table.
 
+Make sure the content language is set to English before entering the data below.
+
+| id | title                         | description                                                                 |
+|----|-------------------------------|-----------------------------------------------------------------------------|
+| 1  | Intelligent Automation        | Automate repetitive tasks using AI and save valuable time every day.       |
+| 2  | Advanced Data Analysis        | Analyze, understand, and leverage your textual data with powerful NLP tools. |
+| 3  | Easy and Fast Integration     | Easily integrate the solution into your existing tools using modern APIs.  |
+
 ---
 
 ### `home-process`
@@ -59,6 +67,15 @@ This table describes the steps or process behind the site or product.
 | Description | longtext | Yes |
 
 👉 Create **3 records** in this table.
+
+Make sure the content language is set to English before entering the data below.
+
+| id | title                     | description                                                                 |
+|----|---------------------------|-----------------------------------------------------------------------------|
+| 1  | Collect Data              | Gather data from your sources, documents, or user inputs in a structured way. |
+| 2  | Process & Understand      | Use NLP and AI models to analyze, structure, and extract meaningful insights. |
+| 3  | Deliver Insights          | Transform processed data into clear answers, summaries, or actionable outputs. |
+
 
 ---
 
@@ -83,6 +100,17 @@ This table powers the directory list and detail pages.
 - **Overview**: Rich description (WYSIWYG content)  
 - **Tag**: Team / Core / Expert  
 - **Email**: henry@example.com  
+
+Make sure the content language is set to English before entering the data below.
+
+| id | name           | role        | description                                  | overview                                                                                                   | tag    | email                   |
+|----|----------------|-------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|--------|-------------------------|
+| 1  | Henry Walker   | Developer   | Senior full-stack developer specialized in AI applications. | <p>Henry designs and builds scalable web applications with a strong focus on AI, NLP, and performance.</p><p>He has over 10 years of experience working with modern JavaScript stacks.</p> | Core   | henry@example.com       |
+| 2  | Sarah Collins  | Product Manager | Product leader focused on user-centered design. | <p>Sarah coordinates product vision, roadmap, and delivery.</p><p>She works closely with engineering and design teams to ensure maximum user value.</p> | Team   | sarah@example.com       |
+| 3  | Michael Brown  | AI Engineer | Expert in machine learning and NLP systems. | <p>Michael develops and optimizes AI models for text analysis, summarization, and knowledge extraction.</p><p>He is passionate about applied AI solutions.</p> | Expert | michael@example.com     |
+| 4  | Laura Martinez | UX Designer | UX/UI designer focused on clarity and usability. | <p>Laura designs intuitive interfaces and smooth user experiences.</p><p>She ensures that complex features remain simple and accessible.</p> | Team   | laura@example.com       |
+| 5  | David Nguyen   | DevOps Engineer | Infrastructure and deployment specialist. | <p>David manages cloud infrastructure, CI/CD pipelines, and system reliability.</p><p>He ensures high availability and secure deployments.</p> | Core   | david@example.com       |
+
 
 ---
 
