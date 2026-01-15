@@ -1,14 +1,12 @@
 # Ekit – Template Example (SSR)
 
-This template is an example of a **Server-Side Rendered (SSR)** website built with **Ekit**.  
-It demonstrates the use of **layouts**, **partials**, **datasources**, **multilingual content**, and list/detail navigation.
-
 ---
 
 ## 📺 Video Demo: Build a multilingual site in 10 minutes
 [![Watch the video](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=OWrGIviDo1U)
 
-> **[Watch the full 10-minute walkthrough on YouTube](https://www.youtube.com/watch?v=OWrGIviDo1U)** – See the Schema-driven IntelliSense and Live Preview in action.
+This template is an example of a **Server-Side Rendered (SSR)** website built with **Ekit**.  
+It demonstrates the use of **layouts**, **partials**, **datasources**, **multilingual content**, and list/detail navigation.
 
 ---
 
